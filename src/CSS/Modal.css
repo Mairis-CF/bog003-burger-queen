@@ -1,0 +1,50 @@
+.modal{
+  position: fixed;
+  z-index: 999;
+  top:0;
+  left: 0;
+  width: 100%;
+  min-width: 100vh;
+  height: 100%;
+  background-color: rgba(87, 18, 104, 0.44);
+  display: none; 
+  justify-content: center;
+  align-items: center;
+}
+.modal.open{
+  display: flex;
+}
+.modal-container{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 15% 85%;
+  background-color: #0F0340;
+  width: 80%;
+  height: 85%;
+  border-radius: 20px;
+  justify-content: center;
+}
+.additional-menu{
+  overflow-y: auto;
+  width: 90%;
+  justify-self: center;
+  height: 95%;
+
+}
+.add{
+  font-size: 35px;
+  color: white;
+  text-align: center;
+  padding-top: 25px;  
+}
+.food-add{
+  height: 95%;
+  justify-content: center;
+  width: 95%;
+}
+.modal-close{
+  position: absolute;
+  top: 12%;
+  right:13%;
+
+}

@@ -2,7 +2,7 @@
     "menu": [
       {
         "id":"D1",
-        "name": "Sandwich de jamón y queso",
+        "name": "Sandwich jamón y queso",
         "img": "/images/Sandwich jamon y queso.jpg",
         "price": 10000,
         "type": "Desayuno"
@@ -175,6 +175,70 @@
       "img": "/images/Agua.jpg",
       "price": 3000,
       "type": "Bebidas"
+    },
+    {
+      "id": "A1",
+      "name": "Papas a la francesa",
+      "img": "/images/papas.jpg",
+      "price": 4000,
+      "type": "Adiciones"
+    },
+    {
+      "id": "A2",
+      "name": "Yuca frita",
+      "img": "/images/yuca.jpg",
+      "price": 5000,
+      "type": "Adiciones"
+    },
+    {
+      "id": "A3",
+      "name": "Aros de cebolla",
+      "img": "/images/aros cebolla.jpg",
+      "price": 5000,
+      "type": "Adiciones"
+    },
+    {
+      "id": "A4",
+      "name": "Deditos de queso",
+      "img": "/images/deditos de queso.jpg",
+      "price": 5000,
+      "type": "Adiciones"
+    },
+    {
+      "id": "A5",
+      "name": "Porción de carne",
+      "img": "/images/carne.jpg",
+      "price": 8000,
+      "type": "Adiciones"
+    },
+    {
+      "id": "A6",
+      "name": "Porción de queso",
+      "img": "/images/queso.jpg",
+      "price": 6000,
+      "type": "Adiciones"
+    },
+    {
+      "id": "A7",
+      "name": "Porción de jamón",
+      "img": "/images/jamon.jpg",
+      "price": 8000,
+      "type": "Adiciones"
+    },
+    {
+      "id": "A8",
+      "name": "Ensalada de pollo",
+      "img": "/images/ensalada pollo.jpg",
+      "price": 7000,
+      "type": "Adiciones"
+    },
+    {
+      "id": "A9",
+      "name": "Ensalada de vegetales",
+      "img": "/images/ensalada vegetales.jpg",
+      "price": 7000,
+      "type": "Adiciones"
     }
+    
   ]
 }

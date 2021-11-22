@@ -16,7 +16,6 @@ const ItemMenuChart = ({itemImg, itemName, itemPrice}) => {
 }
 
 const MenuItems = (props) => {
-    console.log(props)
     return (
         <section className="menuItems">
             

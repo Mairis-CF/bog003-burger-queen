@@ -19,6 +19,7 @@
 .lblTab label{
     display: inline-block;
     padding: 10px;
+    padding-right: 44px;
     color: #fff;
     cursor: pointer;
     transition: all 400ms ease;
@@ -50,8 +51,7 @@
 }
 #Desayuno:checked ~ .tab1,
 #Comidas:checked ~ .tab2,
-#Bebidas:checked ~ .tab3,
-#Adiciones:checked ~ .tab4
+#Bebidas:checked ~ .tab3
 {
     opacity: 1;
     visibility: visible;
@@ -65,15 +65,13 @@
     border-top: 10px solid transparent;
     border-bottom: 10px solid rgba(255, 251, 251, 0.219);
     bottom: 100%;
-    left: 88px;
+    left: 100px;
 }
 .content .tab2:after{
-    left: 214px;
+    left: 257px;
 }
 .content .tab3:after{
-    left: 329px;
+    left: 414px;
 }
-.content .tab4:after{
-    left: 448px;
-}
+
 

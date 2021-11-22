@@ -1,11 +1,24 @@
-// import '../index.css'
-// import React from 'react';
-// import  { Link }  from 'react-router-dom';
+import '../CSS/Modal.css'
+import React from 'react';
 
-// function modal(props){
-//   return(
-//      <>
-//   <h1>Pediddo entregado</h1>
-//   </>
-//   )
-// }
+
+
+
+const Modal = ({children, isOpen, closeModal, tittle}) => {
+  return (
+    <article className={`modal ${isOpen && "open"}`}>
+      <div className="modal-container">
+        <div>
+          <p className="add">{tittle}</p>
+        </div>
+        <div> 
+        <button className="modal-close">X</button>
+        </div>
+        {children}
+      </div>
+   
+    </article>
+  )
+}
+
+export default Modal

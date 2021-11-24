@@ -13,9 +13,12 @@ const Modals = () => {
       <button onClick={openModal1}>Adiciones</button>
       <Modal isOpen={isOpenModal1} closeModal={closeModal1} tittle="Adiciones">
         <div className="additional-menu"> 
-        <MenuItems foodType="Adiciones"/>
+        <MenuItems foodType="Adiciones"
+        />
         </div>
-        <div className="food-add"> </div>
+        <div className="food-add"> 
+        <button className="acept" onClick={closeModal1}>Aceptar</button>
+        </div>
       </Modal>
     </div>
   );

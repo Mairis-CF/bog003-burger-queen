@@ -1,18 +1,20 @@
-import React from 'react';
-import '../index.css';
+import React from "react";
+import "../index.css";
+
 
 const MenuListSummary = () => {
-    return (
-        <div className="menuListSummary">
-           
-            <div className="menuListHeader">
-                <p>Nº items</p>
-                <p>Pedido</p>
-                <p>Precio</p>
-            </div>
-
-        </div>
-    );
-}
+  return (
+    <table className="menuListSummary">
+      <thead>
+        <tr className="menuListHeader">
+          <th>Nº items</th>
+          <th>Pedido</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  );
+};
 
 export default MenuListSummary;

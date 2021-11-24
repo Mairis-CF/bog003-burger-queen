@@ -1,7 +1,7 @@
 
 .tabContainer{
     width: 100%;
-    max-width: 550px;
+    max-width: 43%;
     margin-top: 196px;
     margin-left: 40px;
 
@@ -19,7 +19,8 @@
 .lblTab label{
     display: inline-block;
     padding: 10px;
-    padding-right: 44px;
+    padding-right: 10%;
+    padding-left: 5%;
     color: #fff;
     cursor: pointer;
     transition: all 400ms ease;
@@ -65,13 +66,13 @@
     border-top: 10px solid transparent;
     border-bottom: 10px solid rgba(255, 251, 251, 0.219);
     bottom: 100%;
-    left: 100px;
+    left: 15%;
 }
 .content .tab2:after{
-    left: 257px;
+    left: 47%;
 }
 .content .tab3:after{
-    left: 414px;
+    left: 79%;
 }
 
 

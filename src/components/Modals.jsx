@@ -10,13 +10,25 @@ const Modals = () => {
   return (
     <div>
       <h2>Modal</h2>
+      {/*Botón que despliega el modal*/}
       <button onClick={openModal1}>Adiciones</button>
-      <Modal isOpen={isOpenModal1} closeModal={closeModal1} tittle="Adiciones">
+    
+      <Modal 
+        isOpen={isOpenModal1} 
+        closeModal={closeModal1}
+        tittle="Adiciones">
+
         <div className="additional-menu"> 
-        <MenuItems foodType="Adiciones"
+        <MenuItems 
+        foodType="Adiciones"
         />
         </div>
+
         <div className="food-add"> 
+
+     {
+     //Agregar item seleccionado de menú
+     }
         <button className="acept" onClick={closeModal1}>Aceptar</button>
         </div>
       </Modal>

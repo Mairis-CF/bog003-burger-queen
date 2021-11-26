@@ -15,7 +15,9 @@ const chefs =() => {
           Inicio
         </Link>
       </nav>
+
       <Modals/>
+      
     </div>
   );
 }

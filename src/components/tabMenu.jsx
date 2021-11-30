@@ -7,9 +7,9 @@ function TabMenu() {
   return (
     <div className="tabContainer">
       <div className="lblTab" >
-        <label for="Desayuno">Desayuno</label>
-        <label for="Comidas">Comidas</label>
-        <label for="Bebidas">Bebidas</label>
+        <label htmlFor="Desayuno">Desayuno</label>
+        <label htmlFor="Comidas">Comidas</label>
+        <label htmlFor="Bebidas">Bebidas</label>
       </div>
       <div className="content">
         <input type="radio" name="radio" value="Desayuno" onChange={()=> setFilter("Desayuno")} id="Desayuno"></input>

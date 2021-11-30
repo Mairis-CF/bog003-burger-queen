@@ -32,6 +32,7 @@
     width: 264px;
     height:307px;
     align-items: center;
+  
   }
 .itemImg{
     width: 85%;
@@ -45,18 +46,21 @@
     font-size: 20px;
     box-sizing: border-box;
     margin-top: -5px;
+    display: flex;
+    flex-direction: column;
   }
 .itemMenu button{
-  justify-content: center;
-  position: absolute;
   background: none;
   border: none;
   width: 60px;
   height: 60px;
+  margin-left: 13rem;
+  margin-top: -7rem;
+  
 }
 .addImg{
   width:90%;
-  
+  margin-bottom: 2rem;
 }
 .menuListSummary {
     background: rgba(255, 255, 255, 0.3);

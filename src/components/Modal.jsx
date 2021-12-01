@@ -6,20 +6,20 @@ import React from 'react';
 
 const Modal = ({children, isOpen, closeModal, tittle}) => {
   return (
-    <article className={`modal ${isOpen && "open"}`}>
-      <div className="modal-container">
-        <div>
+    <section className={`modal ${isOpen && "open"}`}>
+      <section className="modal-container">
+        <section>
           <p className="add">{tittle}</p>
-        </div>
-        <div> 
+        </section>
+        <section> 
         <button className="modal-close" onClick={closeModal}><img src="icons/close.png" alt="close"/></button>
-        </div>
+        </section>
         {children}
         
        
-      </div>
+      </section>
    
-    </article>
+    </section>
   )
 }
 

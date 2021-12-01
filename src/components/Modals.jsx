@@ -2,25 +2,28 @@ import React from "react";
 import { useModal } from "../hooks/useModal";
 import Modal from "./Modal";
 import "../CSS/Modal.css";
-import MenuItems from "./ItemMenu";
+import "../CSS/menu.css"
+import AditionItems from "./itemAdittions";
 
 // Comando _rafce
 const Modals = () => {
   const [isOpenModal1, openModal1, closeModal1] = useModal(false);
   return (
-    <div>
-      <h2>Modal</h2>
-      <button onClick={openModal1}>Adiciones</button>
+    <section> 
+      <button className="addButton" onClick={openModal1}>
+      <img className="addImg" src="icons/plusButton.png" alt="add" />
+      </button>
       <Modal isOpen={isOpenModal1} closeModal={closeModal1} tittle="Adiciones">
-        <div className="additional-menu"> 
-        <MenuItems foodType="Adiciones"
-        />
-        </div>
-        <div className="food-add"> 
+        <section className="additional-menu"> 
+        <AditionItems foodType="Adiciones"/>
+        </section>
+        <section className="food-add"> 
         <button className="acept" onClick={closeModal1}>Aceptar</button>
-        </div>
+        </section>
       </Modal>
-    </div>
+    </section>
+   
+    
   );
 };
 

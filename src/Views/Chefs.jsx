@@ -1,11 +1,12 @@
-import '../index.css'
-import React from 'react';
-import { Link } from "react-router-dom"
+import "../index.css";
+import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../media/Logo.png";
-import chef from '../media/traje-de-chef.png'
-import Modals from '../components/Modals';
+import chef from "../media/traje-de-chef.png";
 
-const chefs =() => {
+
+
+const chefs = () => {
   return (
     <div>
       <img src={Logo} alt="Pizza planet" className="miniLogo" />
@@ -15,8 +16,8 @@ const chefs =() => {
           Inicio
         </Link>
       </nav>
-      <Modals/>
+      
     </div>
   );
-}
+};
 export default chefs;

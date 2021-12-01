@@ -1,0 +1,36 @@
+{
+  "order": {
+    "id":"1",
+    "date":"",
+    "table": "",
+    "customerName": "",
+    "order": [
+      {
+        "items": 0,
+        "itemName": "Sandwich de jamón y queso",
+        "unitPrice": 15000,
+        "adittion": [
+          {
+            "addItems": 0,
+            "addItemName": "",
+            "addUnitPrice": 0
+          }
+        ]
+      },
+      {
+        "items": 0,
+        "itemName": "Hamburguesa sencilla",
+        "unitPrice": 10000,
+        "adittion": [
+          {
+            "addItems": 0,
+            "addItemName": "",
+            "addUnitPrice": 0
+          }
+        ]
+      }
+    ],
+    "total": "",
+    "state":""
+  }
+}

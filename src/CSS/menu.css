@@ -30,8 +30,9 @@
     background: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     width: 264px;
-    height:307px;
+    height:380px;
     align-items: center;
+    padding-bottom: 2rem;
   
   }
 .itemImg{
@@ -49,15 +50,18 @@
     display: flex;
     flex-direction: column;
   }
-.itemMenu button{
-  background: none;
-  border: none;
-  width: 60px;
-  height: 60px;
-  margin-left: 13rem;
-  margin-top: -7rem;
-  
-}
+
+  .itemMenu button {
+    background: transparent;
+    margin-bottom: 2rem;  
+    border: none;
+  }
+
+  .itemMenu svg {
+    width: 3rem;
+    height: 2.5rem;
+  }
+
 .addImg{
   width:90%;
   margin-bottom: 2rem;
@@ -73,7 +77,61 @@
     padding-top: 2%;
     color: #fff;
     font-size: 22px;
+
+
   }
-th{
-  width: 25%;
+  .menuListSummary thead {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  .menuListHeader {
+    display: flex;
+    align-content: space-around;
+    flex-wrap: nowrap;
+
+    width: 100%;
+  }
+th {
+  width: 80%;
+  padding: 0 5rem 0 3rem;
+
+}
+
+.container-item-order {
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.container-item-order li {
+  width: 70%;
+  list-style: none;
+  list-style-type: disc;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+
+}
+
+.trash-btn button {
+  background: transparent;
+  padding: 0.5rem;
+  border: none;
+  
+}
+
+
+.trash-btn svg {
+  width: 2rem;
+  height: 2rem;
 }

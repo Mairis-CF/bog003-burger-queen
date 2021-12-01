@@ -1,25 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import "../CSS/menu.css";
+import { FaPlusCircle } from 'react-icons/fa';
 import dataMenu from "../data-menu/menu.json";
 
 const menu = dataMenu.menu;
 
-const ItemMenuChart = ({ itemImg, itemName, itemPrice}) => {
+
+const ItemMenuChart = ({ itemImg, itemName, itemPrice, itemId, itemMenu, setItemMenu }) => {
+ 
+
+  const addItemButtonHandler = () => {
+
+    setItemMenu([...itemMenu, {
+      title: itemName,
+      price: itemPrice,
+      id: itemId
+    }])
+  }
+
   return (
     <section className="itemMenu">
-     
-        <img className="itemImg" src={itemImg} alt={itemName} />
-        <p> {itemName} </p>
-        <p> ${itemPrice} </p>
-        <button className="addButton">
-          <img className="addImg" src="icons/plusButton.png" alt="add" />
-        </button>
-      
+
+      <img className="itemImg" src={itemImg} alt={itemName} />
+      <p> {itemName} </p>
+      <p> ${itemPrice} </p>
+      <button onClick={addItemButtonHandler} className="addButton" id={itemId}>
+        <i> <FaPlusCircle /> </i>
+      </button>
+
     </section>
-  );
+  )
 };
 
+
 const MenuItems = (props) => {
+  const [itemMenu, setItemMenu] = useState([]);
+  console.log(itemMenu);
   return (
     <section className="menuItems">
       {menu
@@ -30,6 +46,9 @@ const MenuItems = (props) => {
             itemImg={item.img}
             itemName={item.name}
             itemPrice={item.price}
+            itemId={item.id}
+            itemMenu={itemMenu}
+            setItemMenu={setItemMenu}
           />
         ))}
     </section>

@@ -2,7 +2,7 @@ import '../index.css'
 import React from "react";
 import WaiterNav from "../components/WaiterNav";
 import TabMenu from '../components/tabMenu';
-import MenuListResume from '../components/MenuResume'
+import MenuListSummary from '../components/SummaryMenu'
 
 
 
@@ -15,7 +15,7 @@ const Waiter = () => {
       <input type="text" placeholder="Nombre del cliente" className="inputName" ></input>
       <input type="text" placeholder="N° de mesa" className="inputTables"></input>
       <section className='menuSection'>
-        <MenuListResume />
+        <MenuListSummary />
       </section>
       <TabMenu/>
       

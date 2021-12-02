@@ -17,9 +17,9 @@ function TabMenu() {
           <MenuItems foodType={filter}/>
         </div>
         <input type="radio" name="radio" value="Comidas" onChange={()=> setFilter("Comidas")} id="Comidas"></input>
-{/*         <div className="tab2">
+    <div className="tab2">
           <MenuItems foodType={filter}/>  
-        </div> */}
+        </div> */
         <input type="radio" name="radio" value="Bebidas" onChange={()=> setFilter("Bebidas")} id="Bebidas"></input>
         <div  className="tab3">
           <MenuItems foodType={filter}/>

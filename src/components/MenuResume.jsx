@@ -2,9 +2,6 @@ import React from "react";
 import "../index.css";
 
 import ItemOrder from "./ItemOrder";
-//import  {order} from './ItemMenu';
-
-//const menuOrder = itemMenuOrder;
 
 const MenuListResume = () => {
   return (

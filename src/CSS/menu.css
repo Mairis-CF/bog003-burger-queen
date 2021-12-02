@@ -105,3 +105,14 @@ tr {
 .counter p {
   margin-left: 10px;
 }
+
+.trash-btn {
+  background: transparent;
+  border: none;
+  padding: 1rem;
+}
+
+.trash-btn svg {
+  width: 2rem;
+  height: 2rem;
+}

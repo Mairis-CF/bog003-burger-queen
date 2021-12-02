@@ -10,7 +10,7 @@ function WaiterNav(){
     <header>
       <img src={Logo} alt="Pizza planet" className="miniLogo" />
       <nav className="navWaiter">
-        <Link to="/Waiter/" className="waiter">
+        <Link to="/Waiter" className="waiter">
           Nuevo pedido
         </Link>
         <Link to="/Orders/" className="waiter">

@@ -1,9 +1,13 @@
 import "../CSS/tab.css";
 import { React, useState } from "react";
-import MenuItems  from './ItemMenu.jsx';
+import ItemMenuChart from './ItemMenu.jsx';
+import dataMenu from "../data-menu/menu.json";
 
-function TabMenu() {
-  const [filter, setFilter]= useState("")
+const menu = dataMenu.menu;
+
+const TabMenu = ({ itemMenu, setItemMenu }) => {
+  console.log(itemMenu)
+  const [filter, setFilter] = useState("")
   return (
     <div className="tabContainer">
       <div className="lblTab" >
@@ -11,21 +15,27 @@ function TabMenu() {
         <label htmlFor="Comidas">Comidas</label>
         <label htmlFor="Bebidas">Bebidas</label>
       </div>
-      <div className="content">
-        <input type="radio" name="radio" value="Desayuno" onChange={()=> setFilter("Desayuno")} id="Desayuno"></input>
-        <div className="tab1">
-          <MenuItems foodType={filter}/>
-        </div>
-        <input type="radio" name="radio" value="Comidas" onChange={()=> setFilter("Comidas")} id="Comidas"></input>
-    <div className="tab2">
-          <MenuItems foodType={filter}/>  
-        </div> */
-        <input type="radio" name="radio" value="Bebidas" onChange={()=> setFilter("Bebidas")} id="Bebidas"></input>
-        <div  className="tab3">
-          <MenuItems foodType={filter}/>
-        </div> 
-      </div>
-      
+      <section className="content">
+        <input type="radio" name="radio" value="Desayuno" onChange={() => setFilter("Desayuno")} id="Desayuno"></input>
+        <input type="radio" name="radio" value="Comidas" onChange={() => setFilter("Comidas")} id="Comidas"></input>
+        <input type="radio" name="radio" value="Bebidas" onChange={() => setFilter("Bebidas")} id="Bebidas"></input>
+        <section className="menuItems">
+
+          {menu.filter((item) => item.type === filter)
+            .map((item) => (
+              <ItemMenuChart
+                key={item.id}
+                itemImg={item.img}
+                itemName={item.name}
+                itemPrice={item.price}
+                itemId={item.id}
+                itemMenu={itemMenu}
+                setItemMenu={setItemMenu}
+              />
+            ))}
+        </section>
+      </section>
+
     </div>
   );
 }

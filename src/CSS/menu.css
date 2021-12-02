@@ -1,137 +1,107 @@
 .menuItems {
-  display:flex;
+  display: flex;
   flex-direction: row;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   height: 70vh;
   width: 100%;
   overflow-y: auto;
-  }
-.menuItems section{
+}
+.menuItems section {
   margin: 2px;
 }
-  .menuItems::-webkit-scrollbar{
-    width: 10px;
+.menuItems::-webkit-scrollbar {
+  width: 10px;
 }
-.menuItems::-webkit-scrollbar-thumb{
-    border-radius: 20px;
-    background-color:#d0d8ee ;
+.menuItems::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #d0d8ee;
 }
-.menuItems::-webkit-scrollbar-thumb:hover{
-    background-color: #789af0;
+.menuItems::-webkit-scrollbar-thumb:hover {
+  background-color: #789af0;
 }
-.menuItems::-webkit-scrollbar-thumb:active{
-    background:#658beb;
+.menuItems::-webkit-scrollbar-thumb:active {
+  background: #658beb;
 }
-.menuItems::-webkit-scrollbar-track:hover{
-    background: #7095f3e3;
-    border-radius: 10px;
+.menuItems::-webkit-scrollbar-track:hover {
+  background: #7095f3e3;
+  border-radius: 10px;
 }
 .itemMenu {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    width: 264px;
-    height:380px;
-    align-items: center;
-    padding-bottom: 2rem;
-  
-  }
-.itemImg{
-    width: 85%;
-    height: 65%;
-    padding: 7%;
-    border-radius: 5px;
-  }
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  width: 264px;
+  height: 307px;
+  align-items: center;
+}
+.itemImg {
+  width: 85%;
+  height: 65%;
+  padding: 7%;
+  border-radius: 5px;
+}
 .itemMenu p {
-    color: #fff;
-    text-align: center;
-    font-size: 20px;
-    box-sizing: border-box;
-    margin-top: -5px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .itemMenu button {
-    background: transparent;
-    margin-bottom: 2rem;  
-    border: none;
-  }
-
-  .itemMenu svg {
-    width: 3rem;
-    height: 2.5rem;
-  }
-
-.addImg{
-  width:90%;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  box-sizing: border-box;
+  margin-top: -5px;
+  display: flex;
+  flex-direction: column;
+}
+.addButton {
+  background: none;
+  border: none;
+  width: 60px;
+  height: 60px;
+  margin-left: 13rem;
+  margin-top: -7rem;
+  cursor: pointer;
+}
+.addImg {
+  width: 90%;
   margin-bottom: 2rem;
 }
-.menuListSummary {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    position: absolute;
-    width: 50%;
-    min-height: 70vh;
-    margin-top: 19px;
-    right: 30px;
-    padding-top: 2%;
-    color: #fff;
-    font-size: 22px;
-
-
-  }
-  .menuListSummary thead {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-  }
-
-  .menuListHeader {
-    display: flex;
-    align-content: space-around;
-    flex-wrap: nowrap;
-
-    width: 100%;
-  }
-th {
-  width: 80%;
-  padding: 0 5rem 0 3rem;
-
-}
-
-.container-item-order {
-  display: flex;
-  align-items: center;
-  align-content: flex-start;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: nowrap;
+table.menuListSummary {
+  padding-top: 20px;
   width: 100%;
-  padding-right: 1rem;
 }
-
-.container-item-order li {
-  width: 70%;
-  list-style: none;
-  list-style-type: disc;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-
+.menuSection {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  width: 50%;
+  min-height: 67vh;
+  margin-top: 80px;
+  right: 30px;
+  padding-top: 10px;
 }
-
-.trash-btn button {
-  background: transparent;
-  padding: 0.5rem;
+th,
+td,
+tr {
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+  padding-right: 25px;
+}
+.minusButton,
+.plusButton {
+  background: none;
   border: none;
-  
+  width: 40px;
+  height: 40px;
 }
-
-
-.trash-btn svg {
-  width: 2rem;
-  height: 2rem;
+.counterImg {
+  width: 40px;
+  height: 40px;
+}
+.counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.counter p {
+  margin-left: 10px;
 }

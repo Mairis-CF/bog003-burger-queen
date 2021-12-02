@@ -5,6 +5,8 @@ import TabMenu from '../components/tabMenu';
 import MenuListResume from '../components/MenuResume'
 
 
+
+
 const Waiter = () => {
 
   return (
@@ -12,14 +14,13 @@ const Waiter = () => {
       <WaiterNav/>
       <input type="text" placeholder="Nombre del cliente" className="inputName" ></input>
       <input type="text" placeholder="N° de mesa" className="inputTables"></input>
-      <TabMenu />
       <section className='menuSection'>
         <MenuListResume />
       </section>
+      <TabMenu/>
       
     </>
   );
-
 };
 
 export default Waiter;

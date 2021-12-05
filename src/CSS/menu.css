@@ -75,14 +75,28 @@ table.menuListSummary {
   right: 30px;
   padding-top: 10px;
 }
-th,
-td,
-tr {
-  justify-content: center;
+tbody {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+
+}
+
+ td {
+  padding: 0 2.5rem;
+  font-size: 20px;
+
+}
+.menuListHeader {
+  display: flex;
+  justify-content: space-between;
   color: #fff;
   font-size: 22px;
-  text-align: center;
-  padding-right: 25px;
+  text-align: flex-start;
+  padding: 1rem 1rem 0.5rem 3rem ;
+  margin: 0 8rem 3rem 0;
 }
 .minusButton,
 .plusButton {
@@ -115,4 +129,41 @@ tr {
 .trash-btn svg {
   width: 2rem;
   height: 2rem;
+}
+
+.MenuListSummary-buttons {
+  width: 100%;
+
+
+
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.MenuListSummary-btn-DeleteOrder,
+.MenuListSummary-btn-SendOrder {
+  width: 200px;
+  height:60px;
+  border-radius: 12px;
+  font-size: 18px;
+  border: none;
+  color: #fff;
+}
+
+.MenuListSummary-btn-SendOrder {
+  background: linear-gradient(
+    89.5deg,
+    #cc30e6 18.53%,
+    #698deb 56.52%,
+    #24acf9 88.94%
+  );
+
+}
+
+.MenuListSummary-btn-DeleteOrder {
+  background-color: #898a8d;
+  border-color: #fff;
+
 }

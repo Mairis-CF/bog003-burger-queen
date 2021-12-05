@@ -1,11 +1,13 @@
 import React from "react";
 import "../index.css";
 import '../CSS/menu.css';
-import QuantifyOrder from "../components/QuantifyOrder";
-import { FaTrashAlt } from 'react-icons/fa';
 
 
-const MenuListSummary = ({ itemMenu }) => {
+import ItemOrder from "./ItemOrder";
+
+
+const MenuListSummary = ({ itemMenu, setItemMenu }) => {
+
   return (
     <table className="menuListSummary">
       <thead>
@@ -17,23 +19,25 @@ const MenuListSummary = ({ itemMenu }) => {
       </thead>
       <tbody>
         {itemMenu.map((item) => (
-          <tr key={item.title}>
-            <td>
-              <QuantifyOrder />
-            </td>
-            <td colSpan="4"> {item.title}</td>
-            <td colSpan="1"> ${item.price}</td>
-            <td colSpan="1">
-              <button id={item.id} className="trash-btn">
-                <i><FaTrashAlt /></i>
-              </button>
-            </td>
-
-          </tr>
+          <ItemOrder
+            key={item.id}
+            itemMenu={itemMenu}
+            setItemMenu={setItemMenu}
+            title={item.title}
+            price={item.price}
+            buttonAction={() => setItemMenu(itemMenu.filter((el => el.id !== item.id)))}
+          />
         ))}
       </tbody>
+
+      <div className="MenuListSummary-buttons">
+    <button onClick={() => setItemMenu(itemMenu= [])} className="MenuListSummary-btn-DeleteOrder">Eliminar pedido</button>
+    <button className="MenuListSummary-btn-SendOrder">Enviar a cocina</button>
+    </div> 
     </table>
+  
   );
+
 };
 
 export default MenuListSummary;

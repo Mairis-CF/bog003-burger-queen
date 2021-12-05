@@ -1,23 +1,26 @@
 import React from 'react';
 import '../CSS/menu.css';
 import { FaTrashAlt } from 'react-icons/fa';
+import QuantifyOrder from "../components/QuantifyOrder";
 
 
 
-const ItemOrder = ({ orderTitle, orderPrice, orderId }) => {
+const ItemOrder = ({ buttonAction, price, title }) => {
+
     return (
-        <div className='container-item-order'>
-            <li>
-                <p>{orderTitle}</p>
-                <p>{orderPrice}</p>
-            </li>
-
-            <div className="trash-btn">
-                <button id={orderId}>
+        <tr>
+            <td>
+                <QuantifyOrder />
+            </td>
+            <td colSpan="4"> {title}</td>
+            <td colSpan="1"> ${price}</td>
+            <td colSpan="1">
+                <button onClick={buttonAction} className="trash-btn">
                     <i><FaTrashAlt /></i>
                 </button>
-            </div>
-        </div>
+            </td>
+
+        </tr>
     )
 }
 

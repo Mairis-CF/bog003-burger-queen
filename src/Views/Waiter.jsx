@@ -8,17 +8,17 @@ import MenuListSummary from '../components/SummaryMenu'
 
 
 const Waiter = () => {
-const [itemMenu, setItemMenu] = useState([]);
+  const [itemMenu, setItemMenu] = useState([]);
   return (
     <>
-      <WaiterNav/>
+      <WaiterNav />
       <input type="text" placeholder="Nombre del cliente" className="inputName" ></input>
       <input type="text" placeholder="N° de mesa" className="inputTables"></input>
       <section className='menuSection'>
-        <MenuListSummary itemMenu={itemMenu} setItemMenu={ setItemMenu}/>
+        <MenuListSummary itemMenu={itemMenu} setItemMenu={setItemMenu} />
       </section>
-      <TabMenu itemMenu={itemMenu} setItemMenu={ setItemMenu}/>
-      
+      <TabMenu itemMenu={itemMenu} setItemMenu={setItemMenu} />
+
     </>
   );
 };

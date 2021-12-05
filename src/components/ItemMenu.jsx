@@ -19,21 +19,16 @@ const ItemMenuChart = ({ itemImg, itemName, itemPrice, itemId, foodType, itemMen
 
   return (
     <section className="itemMenu">
-      
+
       <img className="itemImg" src={itemImg} alt={itemName} />
       <p> {itemName} </p>
       <p> ${itemPrice} </p>
       <button onClick={addItemButtonHandler} className="addButton" >
-          <img className="addImg" src="icons/plusButton.png" alt="add" />
+        <img className="addImg" src="icons/plusButton.png" alt="add" />
       </button>
     </section>
   )
 };
 
 export default ItemMenuChart;
- /*  {foodType === "Desayuno" ? (
-        
-  ) : (
-    <Modals />
-  )}
-*/
+

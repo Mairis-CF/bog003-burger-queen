@@ -6,9 +6,7 @@ import '../CSS/menu.css';
 import ItemOrder from "./ItemOrder";
 
 
-const MenuListSummary = ({ itemMenu, setItemMenu, setOrderPrice, orderPrice }) => {
-
-  const deleteOrderHandler = () => { setItemMenu(itemMenu = []);  setOrderPrice(orderPrice = 0) }
+const MenuListSummary = ({ itemMenu, setItemMenu, setOrderPrice, orderPrice, counter, setCounter }) => {
 
   return (
     <table className="menuListSummary">
@@ -25,19 +23,21 @@ const MenuListSummary = ({ itemMenu, setItemMenu, setOrderPrice, orderPrice }) =
             key={item.id}
             itemMenu={itemMenu}
             setItemMenu={setItemMenu}
+            counter={counter}
+            setCounter={setCounter}
             title={item.title}
             price={item.price}
-            buttonAction={() => { setOrderPrice(orderPrice - item.price); setItemMenu(itemMenu.filter((el => el.id !== item.id)))}}
+            buttonAction={() => { setOrderPrice(orderPrice - item.price); setItemMenu(itemMenu.filter((el => el.id !== item.id))) }}
           />
         ))}
       </tbody>
-      
+
       <div className="orderprice-container">
         <p>Valor total de pedido: ${orderPrice}</p>
       </div>
 
       <div className="MenuListSummary-buttons">
-        <button onClick={deleteOrderHandler} className="MenuListSummary-btn-DeleteOrder">Eliminar pedido</button>
+        <button onClick={() => { setItemMenu(itemMenu = []); setOrderPrice(orderPrice = 0) }} className="MenuListSummary-btn-DeleteOrder">Eliminar pedido</button>
         <button className="MenuListSummary-btn-SendOrder">Enviar a cocina</button>
       </div>
     </table>

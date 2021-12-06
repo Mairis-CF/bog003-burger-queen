@@ -5,12 +5,15 @@ import QuantifyOrder from "../components/QuantifyOrder";
 
 
 
-const ItemOrder = ({ buttonAction, price, title }) => {
+const ItemOrder = ({ buttonAction, price, title, counter, setCounter }) => {
 
     return (
         <tr>
             <td>
-                <QuantifyOrder />
+                <QuantifyOrder 
+                counter={counter}
+                setCounter={setCounter}
+                />
             </td>
             <td colSpan="4"> {title}</td>
             <td colSpan="1"> ${price}</td>

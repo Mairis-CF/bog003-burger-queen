@@ -5,7 +5,7 @@ import dataMenu from "../data-menu/menu.json";
 
 const menu = dataMenu.menu;
 
-const TabMenu = ({ itemMenu, setItemMenu }) => {
+const TabMenu = ({ itemMenu, setItemMenu , setOrderPrice, orderPrice }) => {
   console.log(itemMenu)
   const [filter, setFilter] = useState("")
   return (
@@ -31,6 +31,8 @@ const TabMenu = ({ itemMenu, setItemMenu }) => {
                 itemId={item.id}
                 itemMenu={itemMenu}
                 setItemMenu={setItemMenu}
+                setOrderPrice={setOrderPrice}
+                 orderPrice={orderPrice}
               />
             ))}
         </section>

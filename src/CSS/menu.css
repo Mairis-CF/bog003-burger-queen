@@ -167,3 +167,10 @@ tbody {
   border-color: #fff;
 
 }
+
+.orderprice-container {
+ color: #fff;
+ font-size: 20px;
+ margin: 2rem 0 2rem 20rem;
+ font-weight: bold;
+}

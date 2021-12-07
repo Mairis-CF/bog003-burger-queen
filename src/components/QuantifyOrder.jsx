@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 
-const QuantifyOrder = ({counter, setCounter}) => {
-
+const QuantifyOrder = () => {
+  const [counter, setCounter] = useState(1);
   const substractItem = () => {
     if (counter === 1) {
       setCounter(99);

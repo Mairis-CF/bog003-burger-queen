@@ -4,9 +4,47 @@ import '../CSS/menu.css';
 
 
 import ItemOrder from "./ItemOrder";
+import {db} from "../firebase-config";
+import { doc, setDoc } from "firebase/firestore";
 
 
-const MenuListSummary = ({ itemMenu, setItemMenu, setOrderPrice, orderPrice, counter, setCounter }) => {
+const MenuListSummary = (
+  
+  { itemMenu, setItemMenu, 
+    setOrderPrice, orderPrice, 
+    counter, setCounter, 
+    inputTableNum, inputUserName,
+     setInputUserName, setInputTableNum,
+     orderTable, setOrderTable
+    }) => {
+
+  const deleteOrderHandler = () => { 
+    setItemMenu(itemMenu = []) 
+    setOrderPrice(orderPrice = 0) 
+    setOrderTable(orderTable = [])
+    setInputUserName(inputUserName = "")
+    setInputTableNum(inputTableNum = "")
+  }
+
+  const setOrder = async (itemMenu, orderPrice, inputUserName, inputTableNum) => {
+  await setDoc(doc(db, "Orders"), {
+    client: inputUserName,
+    table: inputTableNum,
+    orderResume: [...itemMenu],
+    totalPrice: orderPrice
+  });
+}
+/*   const orderTableHandler = () => {
+
+    setOrderTable([...orderTable, {
+      client: inputUserName,
+      table: inputTableNum,
+      order: itemMenu,
+      price: orderPrice
+    }])
+
+    console.log(orderTable)
+  } */
 
   return (
     <table className="menuListSummary">
@@ -37,8 +75,8 @@ const MenuListSummary = ({ itemMenu, setItemMenu, setOrderPrice, orderPrice, cou
       </div>
 
       <div className="MenuListSummary-buttons">
-        <button onClick={() => { setItemMenu(itemMenu = []); setOrderPrice(orderPrice = 0) }} className="MenuListSummary-btn-DeleteOrder">Eliminar pedido</button>
-        <button className="MenuListSummary-btn-SendOrder">Enviar a cocina</button>
+        <button onClick={deleteOrderHandler} className="MenuListSummary-btn-DeleteOrder">Eliminar pedido</button>
+        <button onClick={setOrder} className="MenuListSummary-btn-SendOrder">Enviar a cocina</button>
       </div>
     </table>
 

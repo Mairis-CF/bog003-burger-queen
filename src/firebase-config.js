@@ -20,3 +20,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 
+  /* 
+  const setOrder = async (itemMenu, orderPrice, inputUserName, inputTableNum) => {
+  await setDoc(doc(db, "Orders"), {
+    client: inputUserName,
+    table: inputTableNum,
+    orderResume: [...itemMenu],
+    totalPrice: orderPrice
+  });
+} */

@@ -10,7 +10,6 @@ import InputsWaiter from '../components/InputsWaiter';
 const Waiter = () => {
   const [itemMenu, setItemMenu] = useState([]);
   const [orderPrice, setOrderPrice] = useState(0);
-  const [counter, setCounter] = useState(1);
   const [inputUserName, setInputUserName] = useState('');
   const [inputTableNum, setInputTableNum] = useState('');
   const [orderTable, setOrderTable] = useState([]);
@@ -30,8 +29,6 @@ const Waiter = () => {
           setItemMenu={setItemMenu}
           orderPrice={orderPrice}
           setOrderPrice={setOrderPrice}
-          counter={counter}
-          setCounter={setCounter}
           inputUserName={inputUserName}
           setInputUserName={setInputUserName}
           setInputTableNum={setInputTableNum}

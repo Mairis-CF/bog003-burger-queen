@@ -32,7 +32,7 @@ const TabMenu = ({ itemMenu, setItemMenu , setOrderPrice, orderPrice }) => {
                 itemMenu={itemMenu}
                 setItemMenu={setItemMenu}
                 setOrderPrice={setOrderPrice}
-                 orderPrice={orderPrice}
+                orderPrice={orderPrice}
               />
             ))}
         </section>

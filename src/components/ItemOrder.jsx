@@ -5,7 +5,7 @@ import QuantifyOrder from "../components/QuantifyOrder";
 
 
 
-const ItemOrder = ({ buttonAction, price, title }) => {
+const ItemOrder = ({ buttonAction, price, title, counter, setCounter }) => {
 
     return (
         <tr>

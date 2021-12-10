@@ -41,7 +41,6 @@ const MenuListSummary = (
 
   }
 
-
   return (
     <table className="menuListSummary">
       <thead>
